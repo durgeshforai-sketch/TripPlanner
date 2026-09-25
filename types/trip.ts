@@ -15,6 +15,8 @@ export interface Trip {
   status: TripStatus;
   expectedMembers: number;
   ownerMemberId: string | null;
+  /** Storage path of the group photo shown on the trip, if someone set one. */
+  coverPhotoPath: string | null;
   createdAt: string;
   updatedAt: string;
 }

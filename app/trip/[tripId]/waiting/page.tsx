@@ -4,7 +4,8 @@ import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { MemberList } from "@/components/trip/memberList";
-import { SearchingScene } from "@/components/illustrations/scenes";
+import { PhotoStrip } from "@/components/journal/photoStrip";
+import { SCRAPBOOK } from "@/lib/group";
 import { ReadinessPanel } from "@/components/trip/readinessPanel";
 import { requireMembership } from "@/lib/auth/session";
 import { getLatestRun, listPreferences } from "@/lib/db/repo";
@@ -33,9 +34,11 @@ export default async function WaitingPage({ params }: PageProps<"/trip/[tripId]/
   return (
     <div className="mx-auto w-full max-w-2xl px-4 py-10 sm:px-6 sm:py-16">
       <div className="animate-rise text-center">
-        <div className="mx-auto h-32 w-full max-w-xs">
-          <SearchingScene />
-        </div>
+        <PhotoStrip
+          className="mb-6"
+          photos={[SCRAPBOOK[6], SCRAPBOOK[4], SCRAPBOOK[7]]}
+          captions={["", "nearly there", ""]}
+        />
         <span className="mx-auto mt-2 flex h-11 w-11 items-center justify-center rounded-2xl bg-strong-soft text-strong">
           <CheckCircle2 className="h-5.5 w-5.5" aria-hidden />
         </span>

@@ -9,6 +9,7 @@ import {
   toPreference,
   toTrip,
   type DecisionRow,
+  type MemoryRow,
   type OptionRow,
   type VoteRow,
 } from "./rows";
@@ -110,6 +111,14 @@ export async function setTripStatus(tripId: string, status: Trip["status"]): Pro
     .update({ status, updated_at: new Date().toISOString() })
     .eq("id", tripId);
   wrap("update the trip", error);
+}
+
+export async function setTripCoverPhoto(tripId: string, path: string | null): Promise<void> {
+  const { error } = await db()
+    .from("trips")
+    .update({ cover_photo_path: path, updated_at: new Date().toISOString() })
+    .eq("id", tripId);
+  wrap("update the cover photo", error);
 }
 
 // ---------------------------------------------------------------- members
@@ -533,6 +542,72 @@ export async function getOptionById(
   const run = await getLatestRun(tripId);
   if (!run) return null;
   return run.options.find((option) => option.id === optionId) ?? null;
+}
+
+// ---------------------------------------------------------------- memories
+
+export async function listMemoryRows(tripId: string): Promise<MemoryRow[]> {
+  const { data, error } = await db()
+    .from("memories")
+    .select("*")
+    .eq("trip_id", tripId)
+    .order("created_at", { ascending: false });
+  wrap("load the memory wall", error);
+  return data ?? [];
+}
+
+export async function countMemories(tripId: string): Promise<number> {
+  const { count, error } = await db()
+    .from("memories")
+    .select("id", { count: "exact", head: true })
+    .eq("trip_id", tripId);
+  wrap("count the memory wall", error);
+  return count ?? 0;
+}
+
+export async function getMemoryRow(tripId: string, memoryId: string): Promise<MemoryRow | null> {
+  const { data, error } = await db()
+    .from("memories")
+    .select("*")
+    .eq("trip_id", tripId)
+    .eq("id", memoryId)
+    .maybeSingle();
+  wrap("load the photo", error);
+  return data;
+}
+
+export async function insertMemoryRow(input: {
+  tripId: string;
+  memberId: string;
+  storagePath: string;
+  caption: string | null;
+  contentType: string;
+  sizeBytes: number;
+  width: number | null;
+  height: number | null;
+}): Promise<MemoryRow> {
+  const { data, error } = await db()
+    .from("memories")
+    .insert({
+      trip_id: input.tripId,
+      member_id: input.memberId,
+      storage_path: input.storagePath,
+      caption: input.caption,
+      content_type: input.contentType,
+      size_bytes: input.sizeBytes,
+      width: input.width,
+      height: input.height,
+    })
+    .select("*")
+    .single();
+  wrap("save the photo", error);
+  if (!data) throw new AppError("internal", "Could not save the photo.");
+  return data;
+}
+
+export async function deleteMemoryRow(memoryId: string): Promise<void> {
+  const { error } = await db().from("memories").delete().eq("id", memoryId);
+  wrap("remove the photo", error);
 }
 
 export { conflict, notFound };

@@ -149,6 +149,60 @@ export type Database = {
           },
         ]
       }
+      memories: {
+        Row: {
+          caption: string | null
+          content_type: string
+          created_at: string
+          height: number | null
+          id: string
+          member_id: string | null
+          size_bytes: number
+          storage_path: string
+          trip_id: string
+          width: number | null
+        }
+        Insert: {
+          caption?: string | null
+          content_type: string
+          created_at?: string
+          height?: number | null
+          id?: string
+          member_id?: string | null
+          size_bytes: number
+          storage_path: string
+          trip_id: string
+          width?: number | null
+        }
+        Update: {
+          caption?: string | null
+          content_type?: string
+          created_at?: string
+          height?: number | null
+          id?: string
+          member_id?: string | null
+          size_bytes?: number
+          storage_path?: string
+          trip_id?: string
+          width?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "memories_member_id_fkey"
+            columns: ["member_id"]
+            isOneToOne: false
+            referencedRelation: "members"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "memories_trip_id_fkey"
+            columns: ["trip_id"]
+            isOneToOne: false
+            referencedRelation: "trips"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       option_member_fits: {
         Row: {
           conflicts: Json
@@ -473,6 +527,7 @@ export type Database = {
       }
       trips: {
         Row: {
+          cover_photo_path: string | null
           created_at: string
           description: string | null
           expected_members: number
@@ -484,6 +539,7 @@ export type Database = {
           updated_at: string
         }
         Insert: {
+          cover_photo_path?: string | null
           created_at?: string
           description?: string | null
           expected_members?: number
@@ -495,6 +551,7 @@ export type Database = {
           updated_at?: string
         }
         Update: {
+          cover_photo_path?: string | null
           created_at?: string
           description?: string | null
           expected_members?: number

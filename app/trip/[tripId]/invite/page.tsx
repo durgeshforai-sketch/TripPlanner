@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { InviteActions } from "@/components/trip/inviteActions";
-import { CelebrationScene } from "@/components/illustrations/scenes";
+import { PhotoStrip } from "@/components/journal/photoStrip";
+import { GROUP, SCRAPBOOK } from "@/lib/group";
 import { MemberList } from "@/components/trip/memberList";
 import { requireMembership } from "@/lib/auth/session";
 import { listPreferences } from "@/lib/db/repo";
@@ -26,9 +27,11 @@ export default async function InvitePage({ params }: PageProps<"/trip/[tripId]/i
   return (
     <div className="mx-auto w-full max-w-2xl px-4 py-10 sm:px-6 sm:py-14">
       <div className="animate-rise">
-        <div className="mx-auto mb-2 h-28 w-full max-w-sm">
-          <CelebrationScene />
-        </div>
+        <PhotoStrip
+          className="mb-8"
+          photos={[SCRAPBOOK[2], GROUP.cover, SCRAPBOOK[3]]}
+          captions={["", "soon", ""]}
+        />
         <h1 className="text-3xl sm:text-4xl">Your trip is ready.</h1>
         <p className="mt-3 text-ink-soft">
           Send this link to everyone coming on {trip.name}. They add what they want, and you all

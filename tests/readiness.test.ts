@@ -5,11 +5,12 @@ import type { Member, Trip } from "@/types/trip";
 
 const trip = (expectedMembers: number): Trip => ({
   id: "trip-1",
-  name: "Palak's Birthday Trip",
+  name: "Durgesh's Birthday Trip",
   description: null,
   inviteCode: "CODE",
   status: "collecting",
   expectedMembers,
+  coverPhotoPath: null,
   ownerMemberId: "m-0",
   createdAt: "2026-09-20T00:00:00.000Z",
   updatedAt: "2026-09-20T00:00:00.000Z",

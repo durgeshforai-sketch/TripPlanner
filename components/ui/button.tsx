@@ -7,16 +7,17 @@ import { Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 disabled:pointer-events-none disabled:opacity-50 whitespace-nowrap active:scale-[0.98]",
+  "inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-all duration-150 disabled:pointer-events-none disabled:opacity-50 whitespace-nowrap active:translate-y-[2px]",
   {
     variants: {
       variant: {
         primary:
-          "gradient-primary text-primary-fg shadow-[0_4px_14px_-4px_var(--primary)] hover:shadow-[0_8px_22px_-6px_var(--primary)] hover:brightness-110",
+          "bg-primary text-primary-fg shadow-[0_3px_0_var(--primary-shade)] hover:bg-primary-hover active:shadow-[0_1px_0_var(--primary-shade)]",
         secondary:
-          "bg-surface text-ink border border-border-strong shadow-[0_1px_2px_rgba(23,20,58,0.04)] hover:border-primary/40 hover:bg-primary-soft/40",
+          "bg-surface text-ink border border-border-strong shadow-[0_2px_0_var(--border-strong)] hover:bg-surface-muted active:shadow-none",
         ghost: "text-ink-soft hover:bg-surface-muted hover:text-ink",
-        accent: "bg-accent text-white hover:brightness-105",
+        accent:
+          "bg-accent text-primary-fg shadow-[0_3px_0_color-mix(in_srgb,var(--accent)_60%,black)] hover:brightness-110 active:shadow-none",
         danger: "bg-notfit-soft text-notfit border border-notfit/30 hover:bg-notfit/15",
       },
       size: {

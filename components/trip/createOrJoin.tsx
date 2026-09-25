@@ -8,6 +8,7 @@ import { Field, Input, Textarea } from "@/components/ui/input";
 import { Notice } from "@/components/ui/states";
 import { PlaceAutocomplete, type PlaceValue } from "@/components/preferences/placeAutocomplete";
 import { ApiCallError, apiFetch } from "@/lib/client/api";
+import { GROUP } from "@/lib/group";
 
 type Mode = "create" | "join" | null;
 
@@ -81,7 +82,7 @@ function CreateTripForm() {
   const router = useRouter();
   const [name, setName] = React.useState("");
   const [description, setDescription] = React.useState("");
-  const [expectedMembers, setExpectedMembers] = React.useState("5");
+  const [expectedMembers, setExpectedMembers] = React.useState(String(GROUP.members.length));
   const [ownerName, setOwnerName] = React.useState("");
   const [origin, setOrigin] = React.useState<PlaceValue | null>(null);
   const [originText, setOriginText] = React.useState("");
@@ -145,7 +146,7 @@ function CreateTripForm() {
             id="trip-name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Palak's Birthday Trip"
+            placeholder="Durgesh's Birthday Trip"
             maxLength={120}
             aria-invalid={errors.name ? true : undefined}
           />
@@ -160,7 +161,7 @@ function CreateTripForm() {
             id="trip-description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            placeholder="Beaches, good food and fun"
+            placeholder="Beaches, good food and zero alarms"
             rows={2}
             maxLength={400}
           />
@@ -191,7 +192,7 @@ function CreateTripForm() {
             id="owner-name"
             value={ownerName}
             onChange={(e) => setOwnerName(e.target.value)}
-            placeholder="Palak"
+            placeholder={GROUP.organiser}
             maxLength={60}
             aria-invalid={errors.ownerName ? true : undefined}
           />

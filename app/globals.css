@@ -1,81 +1,104 @@
 @import "tailwindcss";
 
+/*
+ * Tripsync reads like a shared travel journal, not a product: warm paper,
+ * terracotta ink, a deep teal for calm, handwriting in the margins and photos
+ * taped onto the page. Every screen draws from these tokens.
+ */
 :root {
-  /* Surfaces: light, airy, faintly lavender rather than warm grey. */
-  --bg: #fbfaff;
-  --bg-tint: #f2effd;
-  --surface: #ffffff;
-  --surface-muted: #f6f4fe;
+  /* Paper */
+  --bg: #f4ede1;
+  --bg-tint: #ebe1cf;
+  --surface: #fbf7ef;
+  --surface-muted: #f2e9da;
 
-  --ink: #17143a;
-  --ink-soft: #5b5878;
-  --ink-faint: #8b88a6;
+  /* Ink */
+  --ink: #2b2420;
+  --ink-soft: #5c5047;
+  --ink-faint: #7f7266;
 
-  --border: #e9e5f8;
-  --border-strong: #d6d0ee;
+  --border: #e2d5c1;
+  --border-strong: #cbb99f;
 
-  /* Indigo is the brand. Buttons carry a subtle gradient towards violet. */
-  --primary: #5b4be8;
-  --primary-hover: #4a3ad6;
-  --primary-soft: #ede9ff;
-  --primary-fg: #ffffff;
-  --primary-gradient: linear-gradient(135deg, #6a5bf0 0%, #5b4be8 55%, #7c4ddb 100%);
+  /* Terracotta, like a passport stamp. */
+  --primary: #b24a26;
+  --primary-hover: #983c1c;
+  --primary-soft: #f5dccd;
+  --primary-fg: #fff8f1;
+  --primary-shade: #7f3116;
+  --primary-gradient: linear-gradient(180deg, #bd5530 0%, #b24a26 100%);
 
-  --accent: #ff6b6b;
-  --accent-soft: #ffe9e9;
+  /* Deep sea teal for the calm counterweight. */
+  --accent: #2c6b66;
+  --accent-soft: #d5e6e1;
 
-  /* Status colours read as friendly pastel chips, never alarming. */
-  --strong: #12915a;
-  --strong-soft: #e4f7ec;
-  --good: #2b7fd4;
-  --good-soft: #e6f1fd;
-  --partial: #b7791f;
-  --partial-soft: #fff3dc;
-  --notfit: #d6455d;
-  --notfit-soft: #ffe8ec;
+  /* Fit colours: earthy, never alarming. */
+  --strong: #3b7a4b;
+  --strong-soft: #dcebdc;
+  --good: #2e6a8a;
+  --good-soft: #dbe8ef;
+  --partial: #9a6a12;
+  --partial-soft: #f4e5c3;
+  --notfit: #b03a3a;
+  --notfit-soft: #f6dcd7;
 
-  --ring: #5b4be8;
+  --ring: #b24a26;
 
-  --shadow-card: 0 1px 2px rgba(23, 20, 58, 0.04), 0 8px 24px -12px rgba(23, 20, 58, 0.14);
-  --shadow-lift: 0 2px 4px rgba(23, 20, 58, 0.05), 0 18px 40px -18px rgba(91, 75, 232, 0.35);
+  --tape: rgba(236, 214, 160, 0.78);
+  --polaroid: #fffdf8;
+  --rule: rgba(92, 80, 71, 0.13);
+  /* Paper grain, as a background layer so it never sits above anything. */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.27 0 0 0 0 0.18 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  --shadow-card: 0 1px 0 rgba(43, 36, 32, 0.04), 0 10px 24px -16px rgba(60, 40, 20, 0.35);
+  --shadow-lift: 0 2px 0 rgba(43, 36, 32, 0.05), 0 22px 40px -22px rgba(60, 40, 20, 0.5);
+  --shadow-photo: 0 1px 2px rgba(43, 36, 32, 0.18), 0 14px 28px -14px rgba(43, 36, 32, 0.45);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #100e1c;
-    --bg-tint: #171432;
-    --surface: #1a1730;
-    --surface-muted: #221e3d;
+    /* Same journal, read by lamplight. */
+    --bg: #1b1714;
+    --bg-tint: #221d19;
+    --surface: #26201b;
+    --surface-muted: #2f2822;
 
-    --ink: #f1eefc;
-    --ink-soft: #b3aed3;
-    --ink-faint: #8681a6;
+    --ink: #f2eadf;
+    --ink-soft: #c9bcab;
+    --ink-faint: #9a8d7f;
 
-    --border: #2b2749;
-    --border-strong: #3d3766;
+    --border: #3a322b;
+    --border-strong: #52473c;
 
-    --primary: #8f80ff;
-    --primary-hover: #a394ff;
-    --primary-soft: #241f4d;
-    --primary-fg: #12102a;
-    --primary-gradient: linear-gradient(135deg, #9b8cff 0%, #8f80ff 55%, #a97bf0 100%);
+    --primary: #ea8b61;
+    --primary-hover: #f29c75;
+    --primary-soft: #3d261c;
+    --primary-fg: #1d1310;
+    --primary-shade: #a85a39;
+    --primary-gradient: linear-gradient(180deg, #ef9670 0%, #ea8b61 100%);
 
-    --accent: #ff8b8b;
-    --accent-soft: #3a2230;
+    --accent: #76c2b7;
+    --accent-soft: #1e3431;
 
-    --strong: #4ed195;
-    --strong-soft: #143229;
-    --good: #6fb3f5;
-    --good-soft: #14273c;
-    --partial: #e0a94f;
-    --partial-soft: #322614;
-    --notfit: #ff8097;
-    --notfit-soft: #381a26;
+    --strong: #7fc48e;
+    --strong-soft: #1d3022;
+    --good: #7fb5d6;
+    --good-soft: #1b2a33;
+    --partial: #e0b25a;
+    --partial-soft: #352a15;
+    --notfit: #f08a82;
+    --notfit-soft: #3a1f1c;
 
-    --ring: #8f80ff;
+    --ring: #ea8b61;
 
-    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 28px -14px rgba(0, 0, 0, 0.7);
-    --shadow-lift: 0 2px 6px rgba(0, 0, 0, 0.45), 0 20px 44px -20px rgba(143, 128, 255, 0.4);
+    --tape: rgba(214, 190, 130, 0.42);
+    --polaroid: #f4eee4;
+    --rule: rgba(242, 234, 223, 0.08);
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.27 0 0 0 0 0.18 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
+    --shadow-card: 0 1px 0 rgba(0, 0, 0, 0.3), 0 12px 28px -16px rgba(0, 0, 0, 0.8);
+    --shadow-lift: 0 2px 0 rgba(0, 0, 0, 0.35), 0 24px 44px -22px rgba(0, 0, 0, 0.85);
+    --shadow-photo: 0 1px 2px rgba(0, 0, 0, 0.5), 0 16px 30px -14px rgba(0, 0, 0, 0.8);
   }
 }
 
@@ -104,16 +127,21 @@
   --color-notfit: var(--notfit);
   --color-notfit-soft: var(--notfit-soft);
   --color-ring: var(--ring);
+  --color-polaroid: var(--polaroid);
 
-  --radius-card: 1.25rem;
-  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --radius-card: 0.9rem;
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-hand: var(--font-caveat), "Segoe Print", "Bradley Hand", cursive;
 
   --shadow-card: var(--shadow-card);
   --shadow-lift: var(--shadow-lift);
+  --shadow-photo: var(--shadow-photo);
 
-  --animate-rise: rise 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-rise: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
   --animate-fade: fade 0.3s ease both;
   --animate-float: float 7s ease-in-out infinite;
+  --animate-settle: settle 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes rise {
@@ -128,6 +156,11 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
+/* A photo being dropped onto the page and settling at its own angle. */
+@keyframes settle {
+  from { opacity: 0; transform: translateY(18px) rotate(0deg) scale(0.97); }
+  to { opacity: 1; transform: rotate(var(--tilt, 0deg)); }
+}
 
 @layer base {
   * {
@@ -137,23 +170,27 @@
     -webkit-text-size-adjust: 100%;
   }
   body {
-    background: var(--bg);
+    background-color: var(--bg);
+    background-image: var(--grain);
     color: var(--ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
   h1, h2, h3, h4 {
-    letter-spacing: -0.03em;
+    font-family: var(--font-serif);
+    font-variation-settings: "SOFT" 60, "opsz" 72;
+    letter-spacing: -0.015em;
     text-wrap: balance;
-    font-weight: 700;
+    font-weight: 600;
   }
   h1 {
-    letter-spacing: -0.04em;
+    font-variation-settings: "SOFT" 80, "opsz" 144;
+    letter-spacing: -0.02em;
   }
   :focus-visible {
-    outline: 2px solid var(--ring);
-    outline-offset: 2px;
+    outline: 2px dashed var(--ring);
+    outline-offset: 3px;
     border-radius: 6px;
   }
   ::selection {
@@ -163,12 +200,11 @@
 }
 
 @layer utilities {
-  /* Soft lavender wash used behind hero and celebration moments. */
+  /* Warm wash behind hero moments: late sun on paper. */
   .surface-gradient {
     background-image:
-      radial-gradient(52rem 26rem at 12% -12%, color-mix(in srgb, var(--primary) 16%, transparent), transparent),
-      radial-gradient(40rem 22rem at 92% -4%, color-mix(in srgb, var(--accent) 13%, transparent), transparent),
-      radial-gradient(36rem 20rem at 60% 110%, color-mix(in srgb, var(--primary) 8%, transparent), transparent);
+      radial-gradient(50rem 26rem at 8% -10%, color-mix(in srgb, var(--primary) 12%, transparent), transparent),
+      radial-gradient(40rem 22rem at 96% 0%, color-mix(in srgb, var(--accent) 10%, transparent), transparent);
   }
   .card {
     background: var(--surface);
@@ -180,19 +216,81 @@
     transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s, border-color 0.2s;
   }
   .card-interactive:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px) rotate(-0.25deg);
     box-shadow: var(--shadow-lift);
-    border-color: color-mix(in srgb, var(--primary) 35%, var(--border));
+    border-color: var(--border-strong);
   }
   .gradient-primary {
     background-image: var(--primary-gradient);
   }
+  /* Kept for older call sites; in the journal it is simply terracotta ink. */
   .text-gradient {
-    background-image: linear-gradient(120deg, var(--primary) 0%, #9b6ef0 60%, var(--accent) 120%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--primary);
   }
+  /* Lined notebook paper. */
+  .ruled {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(2rem - 1px),
+      var(--rule) calc(2rem - 1px),
+      var(--rule) 2rem
+    );
+  }
+
+  /* A photo with a white border and room underneath for a caption. */
+  .polaroid {
+    background: var(--polaroid);
+    padding: 0.6rem 0.6rem 0;
+    border-radius: 3px;
+    box-shadow: var(--shadow-photo);
+    transform: rotate(var(--tilt, 0deg));
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s;
+  }
+  .polaroid-interactive:hover {
+    transform: rotate(0deg) translateY(-4px) scale(1.015);
+    box-shadow: var(--shadow-lift);
+    z-index: 2;
+  }
+  .polaroid figcaption {
+    color: #3a302a;
+  }
+
+  /* A strip of masking tape holding a photo on the page. */
+  .tape {
+    position: absolute;
+    width: 6.5rem;
+    height: 1.6rem;
+    background: var(--tape);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    mask-image: linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%);
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  /* Ink stamp. */
+  .stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border: 1.5px solid currentColor;
+    border-radius: 0.4rem;
+    padding: 0.15rem 0.55rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transform: rotate(var(--tilt, -3deg));
+    opacity: 0.9;
+  }
+
+  /* Perforated edge, as on a ticket stub. */
+  .perforated {
+    background-image: radial-gradient(circle at 0.5rem 50%, var(--bg) 0.32rem, transparent 0.34rem);
+    background-size: 1rem 100%;
+    background-repeat: repeat-x;
+  }
+
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { scrollbar-width: none; }
 }

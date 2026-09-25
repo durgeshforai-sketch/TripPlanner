@@ -67,7 +67,7 @@ vi.mock("@/lib/db/repo", () => ({
 const { finalizeDecision, getDecisionState, recordVote } = await import("@/lib/decision/service");
 const { AppError } = await import("@/lib/errors");
 
-const MEMBERS: Member[] = ["Palak", "Riya", "Siddharth", "Karan"].map((name, index) => ({
+const MEMBERS: Member[] = ["Durgesh", "Kajal", "Mihir", "Nandita"].map((name, index) => ({
   id: `m-${index}`,
   tripId: "trip-1",
   name,
@@ -122,8 +122,8 @@ describe("voting", () => {
     await voteAll(["opt-a", "opt-a"]);
     const decision = await getDecisionState("trip-1", MEMBERS);
     expect(decision.votes.filter((v) => v.optionId === null).map((v) => v.memberName)).toEqual([
-      "Siddharth",
-      "Karan",
+      "Mihir",
+      "Nandita",
     ]);
   });
 });
@@ -133,7 +133,7 @@ describe("closing the vote", () => {
     await voteAll(["opt-a", "opt-a", "opt-b"]);
     const result = await finalizeDecision("trip-1", MEMBERS);
     expect(result.outcome).toBe("incomplete");
-    expect(result.missingMembers).toEqual(["Karan"]);
+    expect(result.missingMembers).toEqual(["Nandita"]);
     expect(state.decision.status).toBe("open");
   });
 

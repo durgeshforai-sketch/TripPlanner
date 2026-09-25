@@ -14,6 +14,7 @@ export type OptionRow = Tables["recommendation_options"]["Row"];
 export type FitRow = Tables["option_member_fits"]["Row"];
 export type DecisionRow = Tables["decisions"]["Row"];
 export type VoteRow = Tables["decision_votes"]["Row"];
+export type MemoryRow = Tables["memories"]["Row"];
 
 /**
  * jsonb columns come back as `Json`. Everything we read was written by this app
@@ -43,6 +44,7 @@ export function toTrip(row: TripRow): Trip {
     status: row.status as Trip["status"],
     expectedMembers: row.expected_members,
     ownerMemberId: row.owner_member_id,
+    coverPhotoPath: row.cover_photo_path,
     createdAt: row.created_at,
     updatedAt: row.updated_at,
   };

@@ -1,18 +1,18 @@
 /**
- * Creates a complete five-person trip against a running server, so the whole
- * journey can be demonstrated without filling in the flow five times.
+ * Creates a complete four-person trip against a running server, so the whole
+ * journey can be demonstrated without filling in the flow four times.
  *
  * Usage:
  *   node scripts/seedDemoTrip.mjs [baseUrl]
  *   node scripts/seedDemoTrip.mjs [baseUrl] --join <tripId> <inviteCode>
  *   node scripts/seedDemoTrip.mjs [baseUrl] --vote <tripId>
  *
- * The --join form adds the other four people to a trip you created yourself in
+ * The --join form adds the other three people to a trip you created yourself in
  * the browser, so you can walk your own part of the flow by hand. It writes
  * their sessions to .seed-sessions.json so --vote can cast their votes later,
  * letting you drive the decision from the browser as yourself.
  *
- * Each participant gets their own cookie jar, exactly as five separate browsers
+ * Each participant gets their own cookie jar, exactly as four separate browsers
  * would, so this also exercises the participant session model end to end.
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -60,7 +60,7 @@ const DATES = {
 
 const PEOPLE = [
   {
-    name: "Palak",
+    name: "Durgesh",
     owner: true,
     preference: {
       travelScope: "either",
@@ -88,7 +88,7 @@ const PEOPLE = [
     },
   },
   {
-    name: "Riya",
+    name: "Kajal",
     preference: {
       travelScope: "either",
       destinationMode: "open",
@@ -115,7 +115,7 @@ const PEOPLE = [
     },
   },
   {
-    name: "Siddharth",
+    name: "Mihir",
     preference: {
       travelScope: "either",
       destinationMode: "specific",
@@ -145,7 +145,7 @@ const PEOPLE = [
     },
   },
   {
-    name: "Karan",
+    name: "Nandita",
     preference: {
       travelScope: "domestic",
       destinationMode: "open",
@@ -169,33 +169,6 @@ const PEOPLE = [
       ],
       mustHaves: ["Nature"],
       dealBreakers: ["No party destinations"],
-    },
-  },
-  {
-    name: "Aisha",
-    preference: {
-      travelScope: "either",
-      destinationMode: "open",
-      desiredDestinations: [],
-      originCity: "Hyderabad",
-      originLatitude: 17.385,
-      originLongitude: 78.4867,
-      nearestAirport: "HYD",
-      comfortableBudget: 24000,
-      maximumBudget: 32000,
-      budgetFlexibility: "high",
-      preferredDates: DATES.long,
-      possibleDates: [],
-      unavailableDates: [],
-      minDays: 3,
-      preferredDays: 4,
-      maxDays: 6,
-      tripStyles: [
-        { style: "mixed", priority: "nice" },
-        { style: "food", priority: "must" },
-      ],
-      mustHaves: ["Good food", "Picturesque places"],
-      dealBreakers: ["No overnight buses"],
     },
   },
 ];
@@ -251,7 +224,7 @@ async function main() {
     ({ tripId, inviteCode } = await call("/api/trips", {
       method: "POST",
       body: {
-        name: "Palak's Birthday Trip",
+        name: "Durgesh's Birthday Trip",
         description: "Beaches, good food and fun",
         expectedMembers: PEOPLE.length,
         ownerName: owner.name,

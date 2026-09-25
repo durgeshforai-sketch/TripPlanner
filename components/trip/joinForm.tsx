@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Field, Input } from "@/components/ui/input";
 import { Notice } from "@/components/ui/states";
 import { ApiCallError, apiFetch } from "@/lib/client/api";
+import { GROUP } from "@/lib/group";
 
 export function JoinForm({ tripId, inviteCode }: { tripId: string; inviteCode: string }) {
   const router = useRouter();
@@ -49,7 +50,7 @@ export function JoinForm({ tripId, inviteCode }: { tripId: string; inviteCode: s
               setName(e.target.value);
               setError(null);
             }}
-            placeholder="Riya"
+            placeholder={GROUP.members[1] ?? "Your name"}
             maxLength={60}
             autoFocus
             aria-invalid={error ? true : undefined}

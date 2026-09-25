@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { format, parseISO } from "date-fns";
-import { CalendarDays, Users, Wallet } from "lucide-react";
+import { CalendarDays, Camera, Users, Wallet } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { DestinationArt } from "@/components/trip/destinationArt";
 import { SharePlanButton } from "@/components/trip/sharePlan";
-import { CelebrationScene } from "@/components/illustrations/scenes";
+import { PhotoStrip } from "@/components/journal/photoStrip";
+import { GROUP, SCRAPBOOK } from "@/lib/group";
 import { DestinationPhotoCredit } from "@/components/trip/destinationArt";
 import { requireMembership } from "@/lib/auth/session";
 import { getLatestRun } from "@/lib/db/repo";
@@ -40,11 +41,17 @@ export default async function ConfirmedPage({ params }: PageProps<"/trip/[tripId
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
       <div className="animate-rise text-center">
-        <div className="mx-auto h-32 w-full max-w-md">
-          <CelebrationScene />
-        </div>
-        <h1 className="mt-2 text-4xl sm:text-5xl">You did it.</h1>
-        <p className="mt-3 text-lg text-ink-soft">Your group has decided.</p>
+        <PhotoStrip
+          className="mb-6"
+          photos={[SCRAPBOOK[0], GROUP.cover, SCRAPBOOK[1]]}
+          captions={["", "we're going!", ""]}
+        />
+        <h1 className="mt-2 text-4xl sm:text-6xl">
+          We&rsquo;re <span className="italic text-primary">going.</span>
+        </h1>
+        <p className="mt-3 font-hand text-2xl text-ink-soft">
+          Decided together. Now somebody book it.
+        </p>
       </div>
 
       <article className="card mt-10 overflow-hidden">
@@ -128,6 +135,22 @@ export default async function ConfirmedPage({ params }: PageProps<"/trip/[tripId
       </div>
 
       <DestinationPhotoCredit destination={chosen.destination} className="mt-6 text-center" />
+
+      <Link
+        href={`/trip/${tripId}#memories`}
+        className="card card-interactive mt-12 flex items-center gap-5 p-6"
+      >
+        <Camera className="h-8 w-8 shrink-0 text-accent" aria-hidden />
+        <span>
+          <span className="block font-serif text-xl font-semibold">
+            When we&rsquo;re back, pin the photos
+          </span>
+          <span className="mt-1 block text-sm text-ink-soft">
+            The memory wall keeps them in one place for all of us — not scattered across{" "}
+            {members.length} camera rolls.
+          </span>
+        </span>
+      </Link>
 
       <p className="mt-8 text-center text-lg font-semibold">{PRODUCT.closingLine}</p>
       <p className="mt-2 text-center text-sm text-ink-faint">

@@ -1,14 +1,18 @@
 # Tripsync
 
-**Different preferences. One trip.**
+**Our trip planner — made for Durgesh, Kajal, Mihir & Nandita.**
 
-A group travel *decision* engine. Five friends with different budgets, schedules and
-ideas of fun put their preferences in one place; the app finds where they overlap,
-works out what is actually possible, explains the trade-offs and helps them commit to
-one answer.
+A group travel *decision* engine that feels like a shared travel journal rather than a
+product. Each of us puts in a budget, dates and what we are in the mood for; it finds
+where we overlap, works out what is actually possible, explains the trade-offs and
+helps us commit to one answer. Then it keeps the photos.
 
 It is deliberately **not** a booking site. There are no payments, no hotel or flight
-booking, and no group chat. The product ends where the decision ends.
+booking, and no group chat. It covers the part where we decide, and the memory wall
+afterwards.
+
+Built on [TripTogether](#credits); what changed is listed in
+[What makes it ours](#what-makes-it-ours).
 
 ```
 Collect what everyone wants
@@ -22,6 +26,7 @@ Collect what everyone wants
 
 ## Contents
 
+1. [What makes it ours](#what-makes-it-ours)
 1. [How it works](#how-it-works)
 2. [Local setup](#local-setup)
 3. [Supabase setup](#supabase-setup)
@@ -35,6 +40,45 @@ Collect what everyone wants
 11. [Architecture](#architecture)
 12. [Testing](#testing)
 13. [Known limitations](#known-limitations)
+14. [Credits](#credits)
+
+---
+
+## What makes it ours
+
+**The look.** A travel journal, not a dashboard: warm paper with a grain, terracotta
+ink and a deep teal, Fraunces for headings, Figtree for reading and Caveat for the
+notes in the margins. Photos are taped on as polaroids at hand-placed angles. Dark
+mode is the same journal read by lamplight. Every screen draws from the tokens in
+[`app/globals.css`](app/globals.css), so the whole app changed together.
+
+**The structure.** The landing page is a letter to the group: a group photo, a
+boarding pass with our names, a scrapbook of why we travel, a notebook page on how we
+decide, and the memory wall. Each trip's dashboard is a *trip notebook* with our own
+cover photo at the top and the memory wall at the bottom.
+
+**The extra feature — the memory wall.** Everyone on a trip can pin photos (from the
+last trip, or this one) with a caption. Only trip members can see them.
+
+- Photos are resized and re-encoded in the browser before upload (a 10 MB phone photo
+  becomes ~150–600 KB at 2048 px), so uploads are quick on mobile data and stay under
+  Vercel's 4.5 MB request limit.
+- The server checks the file's first bytes, not its name or declared type, so only real
+  JPEG, PNG or WebP files are stored.
+- Files live in a **private** Supabase Storage bucket, `tripsync-memories`. Pages get
+  one-hour signed URLs after the membership check, the same as every other trip read.
+- Whoever pinned a photo can take it down, and so can the organiser. 300 photos per
+  trip keeps us inside the free Storage tier.
+- The cover photo at the top of a trip can be changed by anyone on it.
+
+**The group.** Names live in [`lib/group.ts`](lib/group.ts) (or
+`NEXT_PUBLIC_GROUP_MEMBERS="Durgesh,Kajal,Mihir,Nandita"`). The landing page, form
+placeholders, default group size and the seed script all read from there.
+
+**Our own group photo on the landing page.** Put the photo at `public/group/cover.jpg`
+and change `GROUP.cover` in `lib/group.ts` to point at `/group/cover.jpg`. Note that
+the landing page is public, so anyone with the link sees that photo. Photos on a
+trip's memory wall and cover stay private.
 
 ---
 
@@ -87,19 +131,19 @@ The app runs at <http://localhost:3000>. With no credentials at all it runs in
 [demo mode](#demo-mode) and the whole journey works end to end, except that a database
 is still required for persistence.
 
-### Seeding a full five-person trip
+### Seeding a full trip for the four of us
 
-Filling in the flow five times to see the results page gets old. With the dev server
+Filling in the flow four times to see the results page gets old. With the dev server
 running:
 
 ```bash
-# Creates a trip, adds five people, submits all preferences, generates options
+# Creates a trip, adds the four of us, submits all preferences, generates options
 node scripts/seedDemoTrip.mjs
 
-# Or: you create the trip in the browser, the script adds the other four
+# Or: you create the trip in the browser, the script adds the other three
 node scripts/seedDemoTrip.mjs http://localhost:3000 --join <tripId> <inviteCode>
 
-# Then, after you generate options in the browser, cast the other four votes
+# Then, after you generate options in the browser, cast the other three votes
 node scripts/seedDemoTrip.mjs http://localhost:3000 --vote <tripId>
 ```
 
@@ -116,14 +160,12 @@ participant-session model rather than writing to the database directly.
    collides with other projects in the same instance.
 3. Expose the schema to the API: **Project Settings → API → Exposed schemas**, add
    `tripsync`.
-4. Grant the service role access:
-
-   ```sql
-   grant usage on schema tripsync to service_role;
-   grant all privileges on all tables in schema tripsync to service_role;
-   grant all privileges on all sequences in schema tripsync to service_role;
-   alter default privileges in schema tripsync grant all on tables to service_role;
-   ```
+4. Run the remaining migrations in order:
+   - [`0002_transport.sql`](supabase/migrations/0002_transport.sql): road, rail and coach
+   - [`0003_service_role_grants.sql`](supabase/migrations/0003_service_role_grants.sql):
+     gives the server key access to the schema
+   - [`0004_memories.sql`](supabase/migrations/0004_memories.sql): the memory wall table,
+     the cover-photo column and the private `tripsync-memories` Storage bucket
 
 5. Set `SUPABASE_URL` and `SUPABASE_SECRET_KEY` (the secret / service-role key).
 
@@ -294,6 +336,7 @@ Demo data follows two rules:
 | `HOLIDAY_API_BASE_URL` | No | Defaults to Nager.Date |
 | `ANTHROPIC_API_KEY` / `ANTHROPIC_MODEL` | No | Server only |
 | `NEXT_PUBLIC_SITE_URL` | No | For absolute invite links; Vercel is auto-detected |
+| `NEXT_PUBLIC_GROUP_MEMBERS` | No | Comma-separated names; defaults to the four of us |
 
 Only `NEXT_PUBLIC_*` variables reach the browser. Every secret-bearing call is made
 from a Route Handler or Server Component, guarded by the `server-only` package.
@@ -382,7 +425,7 @@ before reading anything.
 npm run test
 ```
 
-102 tests covering budget and date validation, long-weekend detection (against the real
+136 tests covering memory-wall upload validation, budget and date validation, long-weekend detection (against the real
 2026 Indian holiday calendar), group consensus, individual scoring, deal-breaker
 elimination, top-3 selection, flight normalisation, third-party failure handling,
 itinerary generation, participant authorisation (including cross-trip token replay) and
@@ -395,10 +438,11 @@ the worst-off member is protected — rather than hard-coding a winning destinat
 
 ## Imagery and licensing
 
-The interface uses two kinds of artwork:
+The interface is all photography:
 
-- **Illustrations** (`components/illustrations/scenes.tsx`) are hand-authored SVG.
-  They theme with the palette, scale cleanly and cost nothing to load.
+- **Group-travel photography** in the scrapbook, the landing page and the photo strips
+  (`lib/group.ts`). These are CC0 Unsplash images mirrored on Commons, credited on the
+  landing page. Replace them with our own photos whenever we like.
 - **Destination photography** is sourced from Wikimedia Commons under free licences,
   curated one image per destination by `scripts/curateImages.mjs` and stored in
   `data/destinationImages.json`.
@@ -450,3 +494,14 @@ rather than showing a broken or empty card.
   model. Treat them as a planning guide.
 - **OpenStreetMap coverage varies.** Activity results are excellent in well-mapped
   places and thin in others, and Overpass is frequently too busy to answer at all.
+
+## Credits
+
+Tripsync started from **TripTogether**, a group travel decision engine. The
+recommendation engine, providers and decision flow come from there; the design, the
+structure, the memory wall and the group personalisation are ours.
+
+The stand-in scrapbook photos are CC0 images by Unsplash contributors, mirrored on
+Wikimedia Commons. They are credited on the landing page and listed in
+[`lib/group.ts`](lib/group.ts).
+

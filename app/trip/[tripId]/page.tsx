@@ -7,19 +7,37 @@ import { Notice } from "@/components/ui/states";
 import { CopyReminderButton } from "@/components/trip/inviteActions";
 import { GenerateButton } from "@/components/trip/generateButton";
 import { MemberList } from "@/components/trip/memberList";
+import { CoverPhoto } from "@/components/memories/coverPhoto";
+import { MemoryWall } from "@/components/memories/memoryWall";
 import { ReadinessPanel } from "@/components/trip/readinessPanel";
 import { requireMembership } from "@/lib/auth/session";
 import { getLatestRun, listPreferences } from "@/lib/db/repo";
 import { assessReadiness } from "@/lib/trips/readiness";
 import { siteUrl } from "@/lib/env";
+import { loadMemoryWall, signedUrlFor } from "@/lib/memories/service";
+import { GROUP } from "@/lib/group";
+import type { TripStatus } from "@/types/trip";
 
-export const metadata = { title: "Trip dashboard" };
+export const metadata = { title: "Trip notebook" };
+
+const STATUS_STAMP: Record<TripStatus, { label: string; tone: string }> = {
+  collecting: { label: "Collecting answers", tone: "text-partial" },
+  analyzing: { label: "Working it out", tone: "text-good" },
+  deciding: { label: "Voting open", tone: "text-primary" },
+  confirmed: { label: "It's decided!", tone: "text-strong" },
+};
 
 export default async function TripDashboard({ params }: PageProps<"/trip/[tripId]">) {
   const { tripId } = await params;
-  const { trip, member, members, isOwner } = await requireMembership(tripId);
+  const membership = await requireMembership(tripId);
+  const { trip, member, members, isOwner } = membership;
 
-  const [preferences, run] = await Promise.all([listPreferences(tripId), getLatestRun(tripId)]);
+  const [preferences, run, wall, coverUrl] = await Promise.all([
+    listPreferences(tripId),
+    getLatestRun(tripId),
+    loadMemoryWall(membership),
+    signedUrlFor(trip.coverPhotoPath),
+  ]);
   const readiness = assessReadiness({
     trip,
     members,
@@ -36,13 +54,34 @@ export default async function TripDashboard({ params }: PageProps<"/trip/[tripId
   const ownerName = members.find((m) => m.role === "owner")?.name ?? "the organiser";
 
   return (
-    <div className="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
-      <header className="animate-rise">
-        <h1 className="text-3xl font-semibold sm:text-4xl">{trip.name}</h1>
-        {trip.description ? <p className="mt-2 text-ink-soft">{trip.description}</p> : null}
+    <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
+      <header className="grid items-center gap-12 lg:grid-cols-[1fr_minmax(0,28rem)]">
+        <div className="animate-rise">
+          <p className="font-hand text-2xl text-ink-faint">our trip notebook</p>
+          <h1 className="mt-1 text-4xl leading-tight sm:text-6xl">{trip.name}</h1>
+          {trip.description ? (
+            <p className="mt-4 max-w-xl text-lg text-ink-soft">{trip.description}</p>
+          ) : null}
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <span className={`stamp ${STATUS_STAMP[trip.status].tone}`}>
+              {STATUS_STAMP[trip.status].label}
+            </span>
+            <span className="font-hand text-xl text-ink-soft">
+              {members.map((m) => m.name).join(" · ")}
+            </span>
+          </div>
+        </div>
+        <div className="mx-auto w-full max-w-md">
+          <CoverPhoto
+            tripId={tripId}
+            url={coverUrl}
+            fallback={GROUP.cover}
+            caption={coverUrl ? trip.name : "swap in a real one of us ↓"}
+          />
+        </div>
       </header>
 
-      <div className="mt-8 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+      <div className="mt-14 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
         <div className="space-y-6">
           <Card>
             <CardHeader className="pb-3">
@@ -139,9 +178,9 @@ export default async function TripDashboard({ params }: PageProps<"/trip/[tripId
         </div>
 
         <section>
-          <h2 className="flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-ink-faint">
-            <Users className="h-4 w-4" aria-hidden />
-            Your group
+          <h2 className="flex items-center gap-2 text-2xl">
+            <Users className="h-5 w-5 text-primary" aria-hidden />
+            The crew
           </h2>
           <div className="mt-3">
             <MemberList
@@ -155,6 +194,10 @@ export default async function TripDashboard({ params }: PageProps<"/trip/[tripId
             <CopyReminderButton url={inviteUrl} label="Copy invite link" />
           </div>
         </section>
+      </div>
+
+      <div className="mt-20 border-t border-dashed border-border-strong pt-14">
+        <MemoryWall tripId={tripId} meId={member.id} isOwner={isOwner} wall={wall} />
       </div>
     </div>
   );
