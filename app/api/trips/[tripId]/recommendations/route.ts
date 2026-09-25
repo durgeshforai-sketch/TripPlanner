@@ -7,7 +7,9 @@ import { generateRecommendations } from "@/lib/recommendation/engine";
 import { assessReadiness } from "@/lib/trips/readiness";
 import { dataSourceStatus } from "@/lib/providers";
 
-export const maxDuration = 60;
+// A run normally finishes in well under 30 s. The headroom is for a day when the
+// free map services are slow, so the group's run is never cut off half-built.
+export const maxDuration = 120;
 
 const bodySchema = z.object({
   /** Explicit opt-in to build options without the people still missing. */

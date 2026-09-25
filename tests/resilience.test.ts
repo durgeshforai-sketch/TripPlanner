@@ -137,3 +137,25 @@ describe("degrading instead of failing", () => {
     expect(summary.estimatedMinimumFlightCost).toBeNull();
   });
 });
+
+describe("busy free services", () => {
+  it("stops asking Overpass for a while once both mirrors have failed", async () => {
+    const { OsmActivityProvider, resetOverpassCoolOff } = await import(
+      "@/lib/providers/osm/activities"
+    );
+    resetOverpassCoolOff();
+    const fetchMock = vi.fn().mockRejectedValue(new TypeError("fetch failed"));
+    vi.stubGlobal("fetch", fetchMock);
+    const provider = new OsmActivityProvider();
+
+    await expect(provider.searchActivities(goa, "beach", 4)).rejects.toBeInstanceOf(ProviderError);
+    const callsForFirstLookup = fetchMock.mock.calls.length;
+    expect(callsForFirstLookup).toBeGreaterThan(0);
+
+    // The next category fails fast instead of spending the run's time budget.
+    await expect(provider.searchActivities(goa, "food", 4)).rejects.toThrow(/cooling off/);
+    expect(fetchMock).toHaveBeenCalledTimes(callsForFirstLookup);
+
+    resetOverpassCoolOff();
+  });
+});

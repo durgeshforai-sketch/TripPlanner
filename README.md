@@ -349,7 +349,7 @@ from a Route Handler or Server Component, guarded by the `server-only` package.
 2. Add the environment variables above in **Project Settings → Environment Variables**.
 3. Deploy. No `vercel.json` is needed.
 
-The recommendation route sets `maxDuration = 60` because a run makes several external
+The recommendation route sets `maxDuration = 120` because a run makes several external
 calls. Everything is serverless-safe: no local filesystem persistence, no long-running
 processes, no in-memory source of truth. Recommendation runs are persisted, so results
 pages never re-trigger the external API layer.

@@ -1,6 +1,6 @@
 import "server-only";
 import { z } from "zod";
-import { fetchJson } from "@/lib/http";
+import { fetchJson, ProviderError } from "@/lib/http";
 import { categoryImage } from "@/data/categoryImages";
 import type { Activity, ActivityCategory } from "@/types/activity";
 import type { ActivityProvider } from "../types";
@@ -58,6 +58,21 @@ const FILTERS: Record<ActivityCategory, string[]> = {
 };
 
 /**
+ * When both mirrors have just failed, asking again for the next destination or
+ * category only burns the request's time budget: a run makes up to a dozen of
+ * these calls, and waiting on each one pushed a run past a minute on Vercel.
+ * So after a full failure we stop asking for a few minutes and let the caller
+ * fall back straight away.
+ */
+const COOL_OFF_MS = 3 * 60 * 1000;
+let unavailableUntil = 0;
+
+/** Test hook: forget any earlier failure. */
+export function resetOverpassCoolOff(): void {
+  unavailableUntil = 0;
+}
+
+/**
  * Real, named places from OpenStreetMap — free and keyless.
  *
  * The public Overpass servers are community-run and frequently busy, so this
@@ -78,6 +93,10 @@ export class OsmActivityProvider implements ActivityProvider {
       .join("");
     const query = `[out:json][timeout:25];(${clauses});out center ${limit * 6};`;
 
+    if (Date.now() < unavailableUntil) {
+      throw new ProviderError("overpass", "overpass is cooling off after recent failures");
+    }
+
     let lastError: unknown = null;
     for (const mirror of MIRRORS) {
       try {
@@ -90,7 +109,7 @@ export class OsmActivityProvider implements ActivityProvider {
           },
           body: new URLSearchParams({ data: query }).toString(),
           rawBody: true,
-          timeoutMs: 18_000,
+          timeoutMs: 8_000,
           retries: 0,
           next: { revalidate: 60 * 60 * 24 * 14 },
         });
@@ -100,6 +119,7 @@ export class OsmActivityProvider implements ActivityProvider {
         lastError = error;
       }
     }
+    unavailableUntil = Date.now() + COOL_OFF_MS;
     throw lastError ?? new Error("Overpass unavailable");
   }
 
