@@ -1,0 +1,370 @@
+{
+  "goa": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Sunloungers_at_Palolem_beach.jpg/1920px-Sunloungers_at_Palolem_beach.jpg",
+    "width": 1400,
+    "height": 788,
+    "credit": "Ravi Dwivedi",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ASunloungers%20at%20Palolem%20beach.jpg"
+  },
+  "gokarna": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/PXL_20260103_101009613_People_and_Beach_Om_Beach_Gokarna%2C_Karnataka_19.jpg/1920px-PXL_20260103_101009613_People_and_Beach_Om_Beach_Gokarna%2C_Karnataka_19.jpg",
+    "width": 1400,
+    "height": 788,
+    "credit": "Sourabh.biswas003",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3APXL%2020260103%20101009613%20People%20and%20Beach%20Om%20Beach%20Gokarna%2C%20Karnataka%2019.jpg"
+  },
+  "jaipur": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg/1920px-East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg",
+    "width": 1400,
+    "height": 1050,
+    "credit": "Chainwit.",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AEast%20facade%20Hawa%20Mahal%20Jaipur%20from%20ground%20level%20(July%202022)%20-%20img%2001.jpg"
+  },
+  "udaipur": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/City_Palace_Udaipur_Rajasthan_India.JPG/1920px-City_Palace_Udaipur_Rajasthan_India.JPG",
+    "width": 1400,
+    "height": 933,
+    "credit": "Hirumon",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ACity%20Palace%20Udaipur%20Rajasthan%20India.JPG"
+  },
+  "jaisalmer": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Jaisalmer_fort_view.jpg",
+    "width": 1400,
+    "height": 874,
+    "credit": "Tonyystarcreations",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AJaisalmer%20fort%20view.jpg"
+  },
+  "manali": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Leh-Manali_Road%2C_Himachal_Pradesh%2C_India.jpg/1920px-Leh-Manali_Road%2C_Himachal_Pradesh%2C_India.jpg",
+    "width": 1400,
+    "height": 933,
+    "credit": "Vyacheslav Argenberg",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ALeh-Manali%20Road%2C%20Himachal%20Pradesh%2C%20India.jpg"
+  },
+  "kasol": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Parvati_Valley_in_Himachal_Pradesh_03.jpg/1920px-Parvati_Valley_in_Himachal_Pradesh_03.jpg",
+    "width": 1400,
+    "height": 788,
+    "credit": "Pinakpani",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AParvati%20Valley%20in%20Himachal%20Pradesh%2003.jpg"
+  },
+  "rishikesh": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Lakshman_jhula%2C_Rishikesh_2.jpg/1920px-Lakshman_jhula%2C_Rishikesh_2.jpg",
+    "width": 1400,
+    "height": 788,
+    "credit": "आशीष_भटनागर",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ALakshman%20jhula%2C%20Rishikesh%202.jpg"
+  },
+  "leh-ladakh": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Pangong_Tso_2.jpg/1920px-Pangong_Tso_2.jpg",
+    "width": 1400,
+    "height": 677,
+    "credit": "KennyOMG",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3APangong%20Tso%202.jpg"
+  },
+  "amritsar": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Hamandir_Sahib_%28Golden_Temple%29.jpg/1920px-Hamandir_Sahib_%28Golden_Temple%29.jpg",
+    "width": 1400,
+    "height": 933,
+    "credit": "This picture has been taken by Oleg Yunakov. Contact e-mail: yunakovgmail.com. Image can be used in accordance with the ",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AHamandir%20Sahib%20(Golden%20Temple).jpg"
+  },
+  "darjeeling": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Kanchenjunga_range_from_tea_gardens_of_darjeeling.jpg/1920px-Kanchenjunga_range_from_tea_gardens_of_darjeeling.jpg",
+    "width": 1400,
+    "height": 840,
+    "credit": "Souviknshm",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AKanchenjunga%20range%20from%20tea%20gardens%20of%20darjeeling.jpg"
+  },
+  "meghalaya": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Living_root_bridge%2C_Maghalaya%2C_India1.jpg/1920px-Living_root_bridge%2C_Maghalaya%2C_India1.jpg",
+    "width": 1400,
+    "height": 818,
+    "credit": "Joydeep Chakraborty",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ALiving%20root%20bridge%2C%20Maghalaya%2C%20India1.jpg"
+  },
+  "munnar": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Munnar_-_Tea_Plantations.jpg/1920px-Munnar_-_Tea_Plantations.jpg",
+    "width": 1400,
+    "height": 521,
+    "credit": "Ingo Mehling",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AMunnar%20-%20Tea%20Plantations.jpg"
+  },
+  "alleppey": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Houseboat_on_Alleppey_backwaters_%28Kerala%2C_India_2023%29_%2852704577484%29.jpg/1920px-Houseboat_on_Alleppey_backwaters_%28Kerala%2C_India_2023%29_%2852704577484%29.jpg",
+    "width": 1400,
+    "height": 1050,
+    "credit": "Paul Arps from The Netherlands",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AHouseboat%20on%20Alleppey%20backwaters%20(Kerala%2C%20India%202023)%20(52704577484).jpg"
+  },
+  "varkala": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Varkala_Cliff_Beach_%28Kerala%2C_India%29.jpg/1920px-Varkala_Cliff_Beach_%28Kerala%2C_India%29.jpg",
+    "width": 1400,
+    "height": 647,
+    "credit": "Pkukreti7",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AVarkala%20Cliff%20Beach%20(Kerala%2C%20India).jpg"
+  },
+  "wayanad": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Soochipara_Falls%2C_Wayanad_Kerala%2C_2013_%28Landscape%29.jpeg/1920px-Soochipara_Falls%2C_Wayanad_Kerala%2C_2013_%28Landscape%29.jpeg",
+    "width": 1400,
+    "height": 1046,
+    "credit": "Yjenith",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ASoochipara%20Falls%2C%20Wayanad%20Kerala%2C%202013%20(Landscape).jpeg"
+  },
+  "pondicherry": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Pondicherry-French_Quarter-WUS02277.jpg/1920px-Pondicherry-French_Quarter-WUS02277.jpg",
+    "width": 1400,
+    "height": 933,
+    "credit": "Rainer Halama",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3APondicherry-French%20Quarter-WUS02277.jpg"
+  },
+  "hampi": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/People_walking_uphill_from_Virupaksha_temple.jpg/1920px-People_walking_uphill_from_Virupaksha_temple.jpg",
+    "width": 1400,
+    "height": 934,
+    "credit": "iMahesh",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3APeople%20walking%20uphill%20from%20Virupaksha%20temple.jpg"
+  },
+  "andaman": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Havelock_Island%2C_Radhanagar_Beach%2C_tropical_bliss%2C_Andaman_Islands.jpg/1920px-Havelock_Island%2C_Radhanagar_Beach%2C_tropical_bliss%2C_Andaman_Islands.jpg",
+    "width": 1400,
+    "height": 933,
+    "credit": "Vyacheslav Argenberg",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AHavelock%20Island%2C%20Radhanagar%20Beach%2C%20tropical%20bliss%2C%20Andaman%20Islands.jpg"
+  },
+  "ooty": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Tea_Monarch_Aramby_Ooty_Nilgiris_Mar21_A7C_00293.jpg/1920px-Tea_Monarch_Aramby_Ooty_Nilgiris_Mar21_A7C_00293.jpg",
+    "width": 1400,
+    "height": 933,
+    "credit": "Timothy A. Gonsalves",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ATea%20Monarch%20Aramby%20Ooty%20Nilgiris%20Mar21%20A7C%2000293.jpg"
+  },
+  "mysuru": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Illuminated_Mysore_palace_at_night.JPG",
+    "width": 1400,
+    "height": 753,
+    "credit": "Subhashish Panigrahi",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AIlluminated%20Mysore%20palace%20at%20night.JPG"
+  },
+  "bangkok": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Templo_Wat_Arun%2C_Bangkok%2C_Tailandia%2C_2013-08-22%2C_DD_30.jpg/1920px-Templo_Wat_Arun%2C_Bangkok%2C_Tailandia%2C_2013-08-22%2C_DD_30.jpg",
+    "width": 1400,
+    "height": 935,
+    "credit": "Diego Delso",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ATemplo%20Wat%20Arun%2C%20Bangkok%2C%20Tailandia%2C%202013-08-22%2C%20DD%2030.jpg"
+  },
+  "phuket": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Phuket_Aerial.jpg/1920px-Phuket_Aerial.jpg",
+    "width": 1400,
+    "height": 934,
+    "credit": "Bennypc",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3APhuket%20Aerial.jpg"
+  },
+  "krabi": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Railay%2C_Krabi%2C_Thailand.jpg/1920px-Railay%2C_Krabi%2C_Thailand.jpg",
+    "width": 1400,
+    "height": 933,
+    "credit": "Vyacheslav Argenberg",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ARailay%2C%20Krabi%2C%20Thailand.jpg"
+  },
+  "bali": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Rice_terraces%2C_Bali.jpg/1920px-Rice_terraces%2C_Bali.jpg",
+    "width": 1400,
+    "height": 933,
+    "credit": "Vyacheslav Argenberg",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ARice%20terraces%2C%20Bali.jpg"
+  },
+  "singapore": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Singapore_skyline_at_sunset_viewed_from_Gardens_by_the_Bay_East_-_20120426.jpg/1920px-Singapore_skyline_at_sunset_viewed_from_Gardens_by_the_Bay_East_-_20120426.jpg",
+    "width": 1400,
+    "height": 808,
+    "credit": "Chensiyuan.",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ASingapore%20skyline%20at%20sunset%20viewed%20from%20Gardens%20by%20the%20Bay%20East%20-%2020120426.jpg"
+  },
+  "kuala-lumpur": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/The_Twins_SE_Asia_2019_%2849171985716%29.jpg/1920px-The_Twins_SE_Asia_2019_%2849171985716%29.jpg",
+    "width": 1400,
+    "height": 933,
+    "credit": "James Kerwin from Tbilisi",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AThe%20Twins%20SE%20Asia%202019%20(49171985716).jpg"
+  },
+  "da-nang": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-11.jpg/1920px-H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-11.jpg",
+    "width": 1400,
+    "height": 1148,
+    "credit": "Steffen Schmitz (more photos)",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AH%E1%BB%99i%20An%2C%20Ancient%20Town%2C%202020-01%20CN-11.jpg"
+  },
+  "sri-lanka": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/SL_Demodara_near_Ella_asv2020-01_img02.jpg/1920px-SL_Demodara_near_Ella_asv2020-01_img02.jpg",
+    "width": 1400,
+    "height": 875,
+    "credit": "A.Savin",
+    "licence": "FAL",
+    "source": "https://commons.wikimedia.org/wiki/File%3ASL%20Demodara%20near%20Ella%20asv2020-01%20img02.jpg"
+  },
+  "maldives": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Farukolhufushi01.jpg",
+    "width": 1400,
+    "height": 738,
+    "credit": "Adrian.benko",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AFarukolhufushi01.jpg"
+  },
+  "nepal": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/The_Annapurna_range_from_Pokhara.jpg/1920px-The_Annapurna_range_from_Pokhara.jpg",
+    "width": 1400,
+    "height": 933,
+    "credit": "Jmhullot",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AThe%20Annapurna%20range%20from%20Pokhara.jpg"
+  },
+  "dubai": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Dubai_Skyline_mit_Burj_Khalifa_%2818241030269%29.jpg/1920px-Dubai_Skyline_mit_Burj_Khalifa_%2818241030269%29.jpg",
+    "width": 1400,
+    "height": 933,
+    "credit": "Tim Reckmann from Hamm, Deutschland",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ADubai%20Skyline%20mit%20Burj%20Khalifa%20(18241030269).jpg"
+  },
+  "abu-dhabi": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Sheikh_Zayed_Grand_Mosque_%40_Abu_Dhabi_%2815856602738%29.jpg/1920px-Sheikh_Zayed_Grand_Mosque_%40_Abu_Dhabi_%2815856602738%29.jpg",
+    "width": 1400,
+    "height": 1050,
+    "credit": "Guilhem Vellut from Annecy, France",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ASheikh%20Zayed%20Grand%20Mosque%20%40%20Abu%20Dhabi%20(15856602738).jpg"
+  },
+  "doha": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Doha_Corniche_Skyline_View_1.jpg/1920px-Doha_Corniche_Skyline_View_1.jpg",
+    "width": 1400,
+    "height": 688,
+    "credit": "Zairon",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ADoha%20Corniche%20Skyline%20View%201.jpg"
+  },
+  "tbilisi": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Tbilisi%2C_Old_town%2C_Georgia.jpg/1920px-Tbilisi%2C_Old_town%2C_Georgia.jpg",
+    "width": 1400,
+    "height": 930,
+    "credit": "Vyacheslav Argenberg",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ATbilisi%2C%20Old%20town%2C%20Georgia.jpg"
+  },
+  "almaty": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Shymbulak%2C_Almaty_%28P1180179%29.jpg/1920px-Shymbulak%2C_Almaty_%28P1180179%29.jpg",
+    "width": 1400,
+    "height": 1050,
+    "credit": "Matti Blume",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AShymbulak%2C%20Almaty%20(P1180179).jpg"
+  },
+  "istanbul": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Hagia_Sophia_Mars_2013.jpg/1920px-Hagia_Sophia_Mars_2013.jpg",
+    "width": 1400,
+    "height": 935,
+    "credit": "Arild Vågen",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AHagia%20Sophia%20Mars%202013.jpg"
+  },
+  "lisbon": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Tranv%C3%ADas_en_Alfama_Lisboa_%2814790879138%29.jpg",
+    "width": 1400,
+    "height": 788,
+    "credit": "Pablo Nieto",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ATranv%C3%ADas%20en%20Alfama%20Lisboa%20(14790879138).jpg"
+  },
+  "prague": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Czech-2013-Prague-View_from_Charles_Bridge_of_Prague_Castle.jpg/1920px-Czech-2013-Prague-View_from_Charles_Bridge_of_Prague_Castle.jpg",
+    "width": 1400,
+    "height": 1165,
+    "credit": "Godot13",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ACzech-2013-Prague-View%20from%20Charles%20Bridge%20of%20Prague%20Castle.jpg"
+  },
+  "rome": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Colosseum_in_Rome-April_2007-1-_copie_2B.jpg/1920px-Colosseum_in_Rome-April_2007-1-_copie_2B.jpg",
+    "width": 1400,
+    "height": 822,
+    "credit": "Diliff",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File%3AColosseum%20in%20Rome-April%202007-1-%20copie%202B.jpg"
+  },
+  "barcelona": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Sagrada_Familia_March_2015-10a.jpg/1920px-Sagrada_Familia_March_2015-10a.jpg",
+    "width": 1400,
+    "height": 1053,
+    "credit": "Alvesgaspar",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ASagrada%20Familia%20March%202015-10a.jpg"
+  },
+  "amsterdam": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Water_reflection_of_canal_houses_at_blue_hour_in_Damrak_Amsterdam_the_Netherlands.jpg/1920px-Water_reflection_of_canal_houses_at_blue_hour_in_Damrak_Amsterdam_the_Netherlands.jpg",
+    "width": 1400,
+    "height": 1120,
+    "credit": "Basile Morin",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AWater%20reflection%20of%20canal%20houses%20at%20blue%20hour%20in%20Damrak%20Amsterdam%20the%20Netherlands.jpg"
+  },
+  "interlaken": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Interlaken_Lake_Brienz_%28Ank_Kumar_Infosys%29_19.jpg/1920px-Interlaken_Lake_Brienz_%28Ank_Kumar_Infosys%29_19.jpg",
+    "width": 1400,
+    "height": 933,
+    "credit": "Ank Kumar",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AInterlaken%20Lake%20Brienz%20(Ank%20Kumar%20Infosys)%2019.jpg"
+  },
+  "shimla": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Shimla_night.jpg/1920px-Shimla_night.jpg",
+    "width": 1400,
+    "height": 469,
+    "credit": "KennyOMG",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AShimla%20night.jpg"
+  },
+  "coorg": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Abbey_Falls_2022_4.jpg/1920px-Abbey_Falls_2022_4.jpg",
+    "width": 1400,
+    "height": 1050,
+    "credit": "Ajeeshkumar4u",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AAbbey%20Falls%202022%204.jpg"
+  },
+  "baku": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Fuente_en_Baku%2C_Azerbaiy%C3%A1n%2C_2016-09-26%2C_DD_227-229_HDR.jpg/1920px-Fuente_en_Baku%2C_Azerbaiy%C3%A1n%2C_2016-09-26%2C_DD_227-229_HDR.jpg",
+    "width": 1400,
+    "height": 857,
+    "credit": "Diego Delso",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AFuente%20en%20Baku%2C%20Azerbaiy%C3%A1n%2C%202016-09-26%2C%20DD%20227-229%20HDR.jpg"
+  }
+}

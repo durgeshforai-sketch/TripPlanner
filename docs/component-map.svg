@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1780 1558" width="1780" height="1558" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#c9c1f6"/></marker></defs>
+<rect width="1780" height="1558" fill="#fbfaff"/>
+<text x="40" y="54" font-size="31" font-weight="800" fill="#17143a" letter-spacing="-0.6">Tripsync — component map</text>
+<text x="40" y="80" font-size="14" font-weight="400" fill="#5b5878">Group travel decision engine. Collect preferences → find the overlap → score what is possible → explain trade-offs → the group decides.</text>
+<rect x="1228" y="36" width="164" height="28" rx="14" fill="#e4f7ec"/>
+<text x="1310" y="55" font-size="12.5" font-weight="700" fill="#12915a" text-anchor="middle">Keyless by default</text>
+<rect x="1404" y="36" width="164" height="28" rx="14" fill="#fff3dc"/>
+<text x="1486" y="55" font-size="12.5" font-weight="700" fill="#b7791f" text-anchor="middle">Optional paid key</text>
+<rect x="1580" y="36" width="164" height="28" rx="14" fill="#e6f1fd"/>
+<text x="1662" y="55" font-size="12.5" font-weight="700" fill="#2b7fd4" text-anchor="middle">Persisted</text>
+<rect x="40" y="110" width="1700" height="214" rx="18" fill="#f6f4fe" stroke="#e9e5f8"/>
+<text x="58" y="138" font-size="13" font-weight="800" fill="#8b88a6" letter-spacing="1.5">1 · APP ROUTER PAGES</text>
+<text x="58" y="156" font-size="12" font-weight="400" fill="#8b88a6">Server Components by default; client only where the screen is interactive</text>
+<rect x="58" y="162" width="259" height="52" rx="10" fill="#ffffff" stroke="#e9e5f8"/>
+<text x="70" y="184" font-size="12.5" font-weight="700" fill="#17143a">/</text>
+<text x="70" y="201" font-size="11.5" font-weight="400" fill="#8b88a6">Landing</text>
+<rect x="339" y="162" width="259" height="52" rx="10" fill="#ffffff" stroke="#e9e5f8"/>
+<text x="351" y="184" font-size="12.5" font-weight="700" fill="#17143a">/create</text>
+<text x="351" y="201" font-size="11.5" font-weight="400" fill="#8b88a6">Create or join</text>
+<rect x="620" y="162" width="259" height="52" rx="10" fill="#ffffff" stroke="#e9e5f8"/>
+<text x="632" y="184" font-size="12.5" font-weight="700" fill="#17143a">/join/[inviteCode]</text>
+<text x="632" y="201" font-size="11.5" font-weight="400" fill="#8b88a6">Join a trip</text>
+<rect x="901" y="162" width="259" height="52" rx="10" fill="#ffffff" stroke="#e9e5f8"/>
+<text x="913" y="184" font-size="12.5" font-weight="700" fill="#17143a">/trip/[tripId]</text>
+<text x="913" y="201" font-size="11.5" font-weight="400" fill="#8b88a6">Dashboard</text>
+<rect x="1182" y="162" width="259" height="52" rx="10" fill="#ffffff" stroke="#e9e5f8"/>
+<text x="1194" y="184" font-size="12.5" font-weight="700" fill="#17143a">…/invite</text>
+<text x="1194" y="201" font-size="11.5" font-weight="400" fill="#8b88a6">Share the link</text>
+<rect x="1463" y="162" width="259" height="52" rx="10" fill="#ffffff" stroke="#e9e5f8"/>
+<text x="1475" y="184" font-size="12.5" font-weight="700" fill="#17143a">…/preferences</text>
+<text x="1475" y="201" font-size="11.5" font-weight="400" fill="#8b88a6">8-step flow</text>
+<rect x="58" y="228" width="259" height="52" rx="10" fill="#ffffff" stroke="#e9e5f8"/>
+<text x="70" y="250" font-size="12.5" font-weight="700" fill="#17143a">…/waiting</text>
+<text x="70" y="267" font-size="11.5" font-weight="400" fill="#8b88a6">Who has answered</text>
+<rect x="339" y="228" width="259" height="52" rx="10" fill="#ffffff" stroke="#e9e5f8"/>
+<text x="351" y="250" font-size="12.5" font-weight="700" fill="#17143a">…/results</text>
+<text x="351" y="267" font-size="11.5" font-weight="400" fill="#8b88a6">Top 3 + snapshot</text>
+<rect x="620" y="228" width="259" height="52" rx="10" fill="#ffffff" stroke="#e9e5f8"/>
+<text x="632" y="250" font-size="12.5" font-weight="700" fill="#17143a">…/compare</text>
+<text x="632" y="267" font-size="11.5" font-weight="400" fill="#8b88a6">Side by side</text>
+<rect x="901" y="228" width="259" height="52" rx="10" fill="#ffffff" stroke="#e9e5f8"/>
+<text x="913" y="250" font-size="12.5" font-weight="700" fill="#17143a">…/option/[optionId]</text>
+<text x="913" y="267" font-size="11.5" font-weight="400" fill="#8b88a6">6 detail tabs</text>
+<rect x="1182" y="228" width="259" height="52" rx="10" fill="#ffffff" stroke="#e9e5f8"/>
+<text x="1194" y="250" font-size="12.5" font-weight="700" fill="#17143a">…/decision</text>
+<text x="1194" y="267" font-size="11.5" font-weight="400" fill="#8b88a6">Vote + runoff</text>
+<rect x="1463" y="228" width="259" height="52" rx="10" fill="#ffffff" stroke="#e9e5f8"/>
+<text x="1475" y="250" font-size="12.5" font-weight="700" fill="#17143a">…/confirmed</text>
+<text x="1475" y="267" font-size="11.5" font-weight="400" fill="#8b88a6">Final plan</text>
+<text x="58" y="314" font-size="11.5" font-weight="400" fill="#8b88a6">components/ · ui · trip · preferences · calendar · recommendations · flights · activities · map · illustrations</text>
+<line x1="890" y1="332" x2="890" y2="354" stroke="#c9c1f6" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="902" y="350" font-size="11.5" font-weight="400" fill="#8b88a6">fetch · one envelope shape</text>
+<rect x="40" y="366" width="1700" height="176" rx="18" fill="#f6f4fe" stroke="#e9e5f8"/>
+<text x="58" y="394" font-size="13" font-weight="800" fill="#8b88a6" letter-spacing="1.5">2 · ROUTE HANDLERS</text>
+<text x="58" y="412" font-size="12" font-weight="400" fill="#8b88a6">Every body validated with Zod · failures normalised to { ok:false, error } · provider errors never reach the browser</text>
+<rect x="58" y="418" width="316.8" height="106" rx="12" fill="#ffffff" stroke="#e9e5f8"/>
+<rect x="58" y="418" width="4" height="106" rx="2" fill="#5b4be8"/>
+<text x="72" y="442" font-size="14" font-weight="700" fill="#17143a">Trips &amp; membership</text>
+<text x="72" y="464" font-size="12" font-weight="400" fill="#5b5878">POST /api/trips</text>
+<text x="72" y="482" font-size="12" font-weight="400" fill="#5b5878">POST …/[tripId]/join</text>
+<text x="72" y="500" font-size="12" font-weight="400" fill="#5b5878">GET …/[tripId] · /members</text>
+<rect x="394.8" y="418" width="316.8" height="106" rx="12" fill="#ffffff" stroke="#e9e5f8"/>
+<rect x="394.8" y="418" width="4" height="106" rx="2" fill="#5b4be8"/>
+<text x="408.8" y="442" font-size="14" font-weight="700" fill="#17143a">Preferences</text>
+<text x="408.8" y="464" font-size="12" font-weight="400" fill="#5b5878">GET/POST …/preferences</text>
+<text x="408.8" y="482" font-size="12" font-weight="400" fill="#5b5878">own answers always,</text>
+<text x="408.8" y="500" font-size="12" font-weight="400" fill="#5b5878">group answers when all in</text>
+<rect x="731.6" y="418" width="316.8" height="106" rx="12" fill="#ffffff" stroke="#e9e5f8"/>
+<rect x="731.6" y="418" width="4" height="106" rx="2" fill="#5b4be8"/>
+<text x="745.6" y="442" font-size="14" font-weight="700" fill="#17143a">Recommendations</text>
+<text x="745.6" y="464" font-size="12" font-weight="400" fill="#5b5878">POST …/recommendations</text>
+<text x="745.6" y="482" font-size="12" font-weight="400" fill="#5b5878">GET …/recommendations</text>
+<text x="745.6" y="500" font-size="12" font-weight="400" fill="#5b5878">GET …/[optionId]</text>
+<rect x="1068.4" y="418" width="316.8" height="106" rx="12" fill="#ffffff" stroke="#e9e5f8"/>
+<rect x="1068.4" y="418" width="4" height="106" rx="2" fill="#5b4be8"/>
+<text x="1082.4" y="442" font-size="14" font-weight="700" fill="#17143a">Decision</text>
+<text x="1082.4" y="464" font-size="12" font-weight="400" fill="#5b5878">POST …/decision/vote</text>
+<text x="1082.4" y="482" font-size="12" font-weight="400" fill="#5b5878">POST …/decision/finalize</text>
+<text x="1082.4" y="500" font-size="12" font-weight="400" fill="#5b5878">GET …/decision</text>
+<rect x="1405.2" y="418" width="316.8" height="106" rx="12" fill="#ffffff" stroke="#e9e5f8"/>
+<rect x="1405.2" y="418" width="4" height="106" rx="2" fill="#5b4be8"/>
+<text x="1419.2" y="442" font-size="14" font-weight="700" fill="#17143a">Lookup</text>
+<text x="1419.2" y="464" font-size="12" font-weight="400" fill="#5b5878">/api/places/* · /api/routes</text>
+<text x="1419.2" y="482" font-size="12" font-weight="400" fill="#5b5878">/api/activities · /api/holidays</text>
+<text x="1419.2" y="500" font-size="12" font-weight="400" fill="#5b5878">/api/flights/search</text>
+<line x1="890" y1="550" x2="890" y2="572" stroke="#c9c1f6" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="902" y="568" font-size="11.5" font-weight="400" fill="#8b88a6">authorise, then compute</text>
+<rect x="40" y="584" width="1700" height="284" rx="18" fill="#f6f4fe" stroke="#e9e5f8"/>
+<text x="58" y="612" font-size="13" font-weight="800" fill="#8b88a6" letter-spacing="1.5">3 · DOMAIN LOGIC (LIB/)</text>
+<text x="58" y="630" font-size="12" font-weight="400" fill="#8b88a6">Pure, testable modules — no React, no vendor SDKs</text>
+<rect x="58" y="636" width="404" height="196" rx="12" fill="#ffffff" stroke="#e9e5f8"/>
+<rect x="58" y="636" width="4" height="196" rx="2" fill="#e05a3c"/>
+<text x="72" y="660" font-size="14" font-weight="700" fill="#17143a">Access &amp; state</text>
+<text x="72" y="682" font-size="12" font-weight="400" fill="#5b5878">auth/session.ts — 256-bit token,</text>
+<text x="72" y="700" font-size="12" font-weight="400" fill="#5b5878">SHA-256 at rest, cookie per trip</text>
+<text x="72" y="718" font-size="12" font-weight="400" fill="#5b5878">db/repo.ts · rows.ts — typed reads</text>
+<text x="72" y="736" font-size="12" font-weight="400" fill="#5b5878">trips/readiness.ts — is the group</text>
+<text x="72" y="754" font-size="12" font-weight="400" fill="#5b5878">actually complete?</text>
+<text x="72" y="772" font-size="12" font-weight="400" fill="#5b5878">decision/service.ts — tally, tie,</text>
+<text x="72" y="790" font-size="12" font-weight="400" fill="#5b5878">one runoff</text>
+<text x="72" y="808" font-size="12" font-weight="400" fill="#5b5878">validation/*.ts — Zod schemas</text>
+<rect x="478" y="636" width="404" height="214" rx="12" fill="#ffffff" stroke="#e9e5f8"/>
+<rect x="478" y="636" width="4" height="214" rx="2" fill="#5b4be8"/>
+<text x="492" y="660" font-size="14" font-weight="700" fill="#17143a">Recommendation engine</text>
+<text x="492" y="682" font-size="12" font-weight="400" fill="#5b5878">config.ts — every weight &amp; threshold</text>
+<text x="492" y="700" font-size="12" font-weight="400" fill="#5b5878">dates.ts — candidate windows, overlap</text>
+<text x="492" y="718" font-size="12" font-weight="400" fill="#5b5878">candidates.ts — destination pool</text>
+<text x="492" y="736" font-size="12" font-weight="400" fill="#5b5878">scoring.ts — hard constraints first,</text>
+<text x="492" y="754" font-size="12" font-weight="400" fill="#5b5878">then 7 weighted dimensions</text>
+<text x="492" y="772" font-size="12" font-weight="400" fill="#5b5878">select.ts — pure shortlist (no I/O)</text>
+<text x="492" y="790" font-size="12" font-weight="400" fill="#5b5878">analysis.ts — group snapshot</text>
+<text x="492" y="808" font-size="12" font-weight="400" fill="#5b5878">enrich.ts · engine.ts — orchestration</text>
+<text x="492" y="826" font-size="12" font-weight="400" fill="#5b5878">explain.ts — deterministic wording</text>
+<rect x="898" y="636" width="404" height="196" rx="12" fill="#ffffff" stroke="#e9e5f8"/>
+<rect x="898" y="636" width="4" height="196" rx="2" fill="#12915a"/>
+<text x="912" y="660" font-size="14" font-weight="700" fill="#17143a">Getting there</text>
+<text x="912" y="682" font-size="12" font-weight="400" fill="#5b5878">transport/model.ts</text>
+<text x="912" y="700" font-size="12" font-weight="400" fill="#5b5878">  fly · train · bus · self-drive</text>
+<text x="912" y="718" font-size="12" font-weight="400" fill="#5b5878">  &lt;300 km → road leads, flight</text>
+<text x="912" y="736" font-size="12" font-weight="400" fill="#5b5878">  marked as not worth it</text>
+<text x="912" y="754" font-size="12" font-weight="400" fill="#5b5878">  no flight to your own airport</text>
+<text x="912" y="772" font-size="12" font-weight="400" fill="#5b5878">  choice = cost + time priced in</text>
+<text x="912" y="790" font-size="12" font-weight="400" fill="#5b5878">transport/build.ts — per origin city</text>
+<text x="912" y="808" font-size="12" font-weight="400" fill="#5b5878">recommendation/travel.ts — origins</text>
+<rect x="1318" y="636" width="404" height="178" rx="12" fill="#ffffff" stroke="#e9e5f8"/>
+<rect x="1318" y="636" width="4" height="178" rx="2" fill="#2b7fd4"/>
+<text x="1332" y="660" font-size="14" font-weight="700" fill="#17143a">Supporting</text>
+<text x="1332" y="682" font-size="12" font-weight="400" fill="#5b5878">holidays/longWeekends.ts —</text>
+<text x="1332" y="700" font-size="12" font-weight="400" fill="#5b5878">  derived, never fetched</text>
+<text x="1332" y="718" font-size="12" font-weight="400" fill="#5b5878">itinerary/generate.ts — rough plan</text>
+<text x="1332" y="736" font-size="12" font-weight="400" fill="#5b5878">http.ts — timeout, retry only on</text>
+<text x="1332" y="754" font-size="12" font-weight="400" fill="#5b5878">  transient faults, bounded fan-out</text>
+<text x="1332" y="772" font-size="12" font-weight="400" fill="#5b5878">api.ts · errors.ts — safe envelopes</text>
+<text x="1332" y="790" font-size="12" font-weight="400" fill="#5b5878">config.ts — product naming</text>
+<line x1="890" y1="876" x2="890" y2="898" stroke="#c9c1f6" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="902" y="894" font-size="11.5" font-weight="400" fill="#8b88a6">depends on interfaces, never on vendors</text>
+<rect x="40" y="910" width="1700" height="108" rx="18" fill="#f6f4fe" stroke="#e9e5f8"/>
+<text x="58" y="938" font-size="13" font-weight="800" fill="#8b88a6" letter-spacing="1.5">4 · PROVIDER INTERFACES</text>
+<text x="58" y="956" font-size="12" font-weight="400" fill="#8b88a6">The replaceable seam — swapping a vendor touches nothing above this line</text>
+<rect x="58" y="962" width="259" height="36" rx="10" fill="#ede9ff" stroke="#c9c1f6"/>
+<text x="187.5" y="985" font-size="13" font-weight="700" fill="#5b4be8" text-anchor="middle">PlaceProvider</text>
+<rect x="339" y="962" width="259" height="36" rx="10" fill="#ede9ff" stroke="#c9c1f6"/>
+<text x="468.5" y="985" font-size="13" font-weight="700" fill="#5b4be8" text-anchor="middle">RouteProvider</text>
+<rect x="620" y="962" width="259" height="36" rx="10" fill="#ede9ff" stroke="#c9c1f6"/>
+<text x="749.5" y="985" font-size="13" font-weight="700" fill="#5b4be8" text-anchor="middle">ActivityProvider</text>
+<rect x="901" y="962" width="259" height="36" rx="10" fill="#ede9ff" stroke="#c9c1f6"/>
+<text x="1030.5" y="985" font-size="13" font-weight="700" fill="#5b4be8" text-anchor="middle">FlightProvider</text>
+<rect x="1182" y="962" width="259" height="36" rx="10" fill="#ede9ff" stroke="#c9c1f6"/>
+<text x="1311.5" y="985" font-size="13" font-weight="700" fill="#5b4be8" text-anchor="middle">HolidayProvider</text>
+<rect x="1463" y="962" width="259" height="36" rx="10" fill="#ede9ff" stroke="#c9c1f6"/>
+<text x="1592.5" y="985" font-size="13" font-weight="700" fill="#5b4be8" text-anchor="middle">AIProvider</text>
+<rect x="40" y="1018" width="1700" height="170" rx="18" fill="#f6f4fe" stroke="#e9e5f8"/>
+<text x="58" y="1046" font-size="13" font-weight="800" fill="#8b88a6" letter-spacing="1.5">5 · IMPLEMENTATIONS</text>
+<text x="58" y="1064" font-size="12" font-weight="400" fill="#8b88a6">lib/providers/index.ts picks one: paid key if present → free service → labelled sample data</text>
+<rect x="58" y="1070" width="259" height="28" rx="14" fill="#e4f7ec"/>
+<text x="187.5" y="1089" font-size="12.5" font-weight="700" fill="#12915a" text-anchor="middle">Photon + Nominatim</text>
+<rect x="58" y="1102" width="259" height="28" rx="14" fill="#fff3dc"/>
+<text x="187.5" y="1121" font-size="12.5" font-weight="700" fill="#b7791f" text-anchor="middle">Google Places</text>
+<rect x="58" y="1134" width="259" height="28" rx="14" fill="#fdeae4"/>
+<text x="187.5" y="1153" font-size="12.5" font-weight="700" fill="#e05a3c" text-anchor="middle">Demo</text>
+<rect x="339" y="1070" width="259" height="28" rx="14" fill="#e4f7ec"/>
+<text x="468.5" y="1089" font-size="12.5" font-weight="700" fill="#12915a" text-anchor="middle">OSRM</text>
+<rect x="339" y="1102" width="259" height="28" rx="14" fill="#fff3dc"/>
+<text x="468.5" y="1121" font-size="12.5" font-weight="700" fill="#b7791f" text-anchor="middle">Google Routes</text>
+<rect x="339" y="1134" width="259" height="28" rx="14" fill="#fdeae4"/>
+<text x="468.5" y="1153" font-size="12.5" font-weight="700" fill="#e05a3c" text-anchor="middle">Demo</text>
+<rect x="620" y="1070" width="259" height="28" rx="14" fill="#e4f7ec"/>
+<text x="749.5" y="1089" font-size="12.5" font-weight="700" fill="#12915a" text-anchor="middle">Overpass (OSM)</text>
+<rect x="620" y="1102" width="259" height="28" rx="14" fill="#fff3dc"/>
+<text x="749.5" y="1121" font-size="12.5" font-weight="700" fill="#b7791f" text-anchor="middle">Google Places</text>
+<rect x="620" y="1134" width="259" height="28" rx="14" fill="#fdeae4"/>
+<text x="749.5" y="1153" font-size="12.5" font-weight="700" fill="#e05a3c" text-anchor="middle">Demo</text>
+<rect x="901" y="1070" width="259" height="28" rx="14" fill="#e4f7ec"/>
+<text x="1030.5" y="1089" font-size="12.5" font-weight="700" fill="#12915a" text-anchor="middle">Distance estimate</text>
+<rect x="901" y="1102" width="259" height="28" rx="14" fill="#fff3dc"/>
+<text x="1030.5" y="1121" font-size="12.5" font-weight="700" fill="#b7791f" text-anchor="middle">Duffel · Amadeus</text>
+<rect x="901" y="1134" width="259" height="28" rx="14" fill="#fdeae4"/>
+<text x="1030.5" y="1153" font-size="12.5" font-weight="700" fill="#e05a3c" text-anchor="middle">Demo</text>
+<rect x="1182" y="1070" width="259" height="28" rx="14" fill="#e4f7ec"/>
+<text x="1311.5" y="1089" font-size="12.5" font-weight="700" fill="#12915a" text-anchor="middle">Curated IN + Nager</text>
+<rect x="1182" y="1134" width="259" height="28" rx="14" fill="#fdeae4"/>
+<text x="1311.5" y="1153" font-size="12.5" font-weight="700" fill="#e05a3c" text-anchor="middle">Local fixed dates</text>
+<rect x="1463" y="1070" width="259" height="28" rx="14" fill="#e4f7ec"/>
+<text x="1592.5" y="1089" font-size="12.5" font-weight="700" fill="#12915a" text-anchor="middle">Deterministic text</text>
+<rect x="1463" y="1102" width="259" height="28" rx="14" fill="#fff3dc"/>
+<text x="1592.5" y="1121" font-size="12.5" font-weight="700" fill="#b7791f" text-anchor="middle">Anthropic</text>
+<line x1="890" y1="1196" x2="890" y2="1218" stroke="#c9c1f6" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="40" y="1230" width="1700" height="268" rx="18" fill="#f6f4fe" stroke="#e9e5f8"/>
+<text x="58" y="1258" font-size="13" font-weight="800" fill="#8b88a6" letter-spacing="1.5">6 · DATA AND THE OUTSIDE WORLD</text>
+<rect x="58" y="1266" width="520" height="196" rx="12" fill="#ffffff" stroke="#e9e5f8"/>
+<rect x="58" y="1266" width="4" height="196" rx="2" fill="#2b7fd4"/>
+<text x="72" y="1290" font-size="14" font-weight="700" fill="#17143a">Static data (data/)</text>
+<text x="72" y="1312" font-size="12" font-weight="400" fill="#5b5878">destinations.ts — 46 curated candidates</text>
+<text x="72" y="1330" font-size="12" font-weight="400" fill="#5b5878">airports.ts — 67 airports + coordinates</text>
+<text x="72" y="1348" font-size="12" font-weight="400" fill="#5b5878">destinationImages.json — one photo each</text>
+<text x="72" y="1366" font-size="12" font-weight="400" fill="#5b5878">categoryImages.json — beach, food, nature…</text>
+<text x="72" y="1384" font-size="12" font-weight="400" fill="#5b5878">localHolidays.ts — curated IN 2026/27</text>
+<text x="72" y="1402" font-size="12" font-weight="400" fill="#5b5878"></text>
+<text x="72" y="1420" font-size="12" font-weight="400" fill="#5b5878">Photos: Wikimedia Commons, free licences,</text>
+<text x="72" y="1438" font-size="12" font-weight="400" fill="#5b5878">credited wherever they appear.</text>
+<rect x="598" y="1266" width="560" height="214" rx="12" fill="#ffffff" stroke="#e9e5f8"/>
+<rect x="598" y="1266" width="4" height="214" rx="2" fill="#12915a"/>
+<text x="612" y="1290" font-size="14" font-weight="700" fill="#17143a">Free, keyless services</text>
+<text x="612" y="1312" font-size="12" font-weight="400" fill="#5b5878">photon.komoot.io — type-ahead</text>
+<text x="612" y="1330" font-size="12" font-weight="400" fill="#5b5878">nominatim.openstreetmap.org — geocoding</text>
+<text x="612" y="1348" font-size="12" font-weight="400" fill="#5b5878">router.project-osrm.org — road distance</text>
+<text x="612" y="1366" font-size="12" font-weight="400" fill="#5b5878">overpass-api.de — real places to go</text>
+<text x="612" y="1384" font-size="12" font-weight="400" fill="#5b5878">tile.openstreetmap.org — Leaflet tiles</text>
+<text x="612" y="1402" font-size="12" font-weight="400" fill="#5b5878">date.nager.at — public holidays</text>
+<text x="612" y="1420" font-size="12" font-weight="400" fill="#5b5878"></text>
+<text x="612" y="1438" font-size="12" font-weight="400" fill="#5b5878">Community-run and often busy: short</text>
+<text x="612" y="1456" font-size="12" font-weight="400" fill="#5b5878">timeouts, a mirror, and always a fallback.</text>
+<rect x="1178" y="1266" width="290" height="196" rx="12" fill="#ffffff" stroke="#e9e5f8"/>
+<rect x="1178" y="1266" width="4" height="196" rx="2" fill="#b7791f"/>
+<text x="1192" y="1290" font-size="14" font-weight="700" fill="#17143a">Optional, paid</text>
+<text x="1192" y="1312" font-size="12" font-weight="400" fill="#5b5878">Google Places (New)</text>
+<text x="1192" y="1330" font-size="12" font-weight="400" fill="#5b5878">Google Routes</text>
+<text x="1192" y="1348" font-size="12" font-weight="400" fill="#5b5878">Duffel — live airfares</text>
+<text x="1192" y="1366" font-size="12" font-weight="400" fill="#5b5878">Amadeus — alternative</text>
+<text x="1192" y="1384" font-size="12" font-weight="400" fill="#5b5878">Anthropic — wording only</text>
+<text x="1192" y="1402" font-size="12" font-weight="400" fill="#5b5878"></text>
+<text x="1192" y="1420" font-size="12" font-weight="400" fill="#5b5878">None required.</text>
+<text x="1192" y="1438" font-size="12" font-weight="400" fill="#5b5878">No free live-fare source exists.</text>
+<rect x="1488" y="1266" width="234" height="214" rx="12" fill="#ffffff" stroke="#e9e5f8"/>
+<rect x="1488" y="1266" width="4" height="214" rx="2" fill="#2b7fd4"/>
+<text x="1502" y="1290" font-size="14" font-weight="700" fill="#17143a">Supabase Postgres</text>
+<text x="1502" y="1312" font-size="12" font-weight="400" fill="#5b5878">schema: tripsync</text>
+<text x="1502" y="1330" font-size="12" font-weight="400" fill="#5b5878">trips · members</text>
+<text x="1502" y="1348" font-size="12" font-weight="400" fill="#5b5878">participant_sessions · preferences</text>
+<text x="1502" y="1366" font-size="12" font-weight="400" fill="#5b5878">recommendation_runs</text>
+<text x="1502" y="1384" font-size="12" font-weight="400" fill="#5b5878">recommendation_options</text>
+<text x="1502" y="1402" font-size="12" font-weight="400" fill="#5b5878">option_member_fits</text>
+<text x="1502" y="1420" font-size="12" font-weight="400" fill="#5b5878">decisions · decision_votes</text>
+<text x="1502" y="1438" font-size="12" font-weight="400" fill="#5b5878"></text>
+<text x="1502" y="1456" font-size="12" font-weight="400" fill="#5b5878">RLS on, no policies — server key only.</text>
+<text x="40" y="1532" font-size="12" font-weight="400" fill="#8b88a6">Runs with zero API keys. The LLM never selects destinations or produces numbers — it only rewrites an explanation already computed. 131 tests cover scoring, transport, readiness, auth and voting.</text>
+</svg>
